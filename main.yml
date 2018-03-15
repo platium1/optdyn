@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks:
+    - name: exec shell
+      shell: echo "Hello Sydyk" >> /var/www/html/index.html
