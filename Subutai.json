@@ -1,5 +1,5 @@
 {
-  "name": "optdynSite",
+ "name": "${envName}",
   "description": "Static optdynSite",
   "containers": [
     {
@@ -42,6 +42,12 @@
       "type": "domain",
       "default": "mysite.envs.subutai.cloud",
       "validation": "[a-zA-Z0-9.-]+"
+    },
+     "envName": {
+      "description": "Enter your environment name",
+      "type": "string",
+      "default": "wordpress env",
+      "validation": "[a-zA-Z0-9]+"
     }
   }
 }
