@@ -59,7 +59,7 @@
        "description": "Enter apache container count",
       "type": "int",
       "default": "wordpress env",
-      "validation": "[0-9]+"
+      "validation": "\\d+"
    }
   }
 }
