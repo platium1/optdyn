@@ -60,6 +60,6 @@
       "type": "int",
       "default": "50",
       "validation": "\\d+"
-    },
+    }
   }
 }
