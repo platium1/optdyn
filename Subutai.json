@@ -6,7 +6,7 @@
       "template": "apache",
       "peer-criteria": "HTTP-optdyn",
       "size": "SMALL",
-      "count" : "6",
+      "count" : "${containerCount}",
       "port-mapping": [
         {
           "protocol": "http",
@@ -54,6 +54,12 @@
       "type": "string",
       "default": "wordpress env",
       "validation": "[a-zA-Z0-9]+"
-    }
+    },
+   "containerCount": {
+      "description": "To search and find the best initial peers for you to select from, enter the maximum GoodWill / hour (GW/h) limit you might be willing to pay while running this application on rented peers? You can still select free peers, your peers, and others based on price before installing the application.",
+      "type": "int",
+      "default": "50",
+      "validation": "\\d+"
+    },
   }
 }
