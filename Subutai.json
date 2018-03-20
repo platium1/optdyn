@@ -6,6 +6,7 @@
       "template": "apache",
       "peer-criteria": "HTTP-optdyn",
       "size": "SMALL",
+      "count" : "2",
       "port-mapping": [
         {
           "protocol": "http",
