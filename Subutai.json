@@ -1,12 +1,11 @@
 {
- "name": "${envName}",
+  "name": "${envName}",
   "containers": [
     {
       "hostname": "mysite",
       "template": "apache",
       "peer-criteria": "HTTP-optdyn",
       "size": "SMALL",
-      "count" : "${containerCount}",
       "port-mapping": [
         {
           "protocol": "http",
@@ -14,7 +13,7 @@
           "internal-port": "80",
           "external-port": "80"
         },
-         {
+        {
           "protocol": "tcp",
           "domain": "${domain}",
           "internal-port": "80",
@@ -29,18 +28,19 @@
     }
   ],
   "ansible-configuration": {
-  "source-url": "https://github.com/platium1/optdyn/archive/master.zip",
-  "ansible-playbook": "main.yml",
-  "extra-vars": [],
-  "groups": [
-            {
-                "name": "web",
-                "hostnames": [
-                    "mysite"
-                ]
-            }
-        ]            
-  
+    "source-url": "https://github.com/platium1/optdyn/archive/master.zip",
+    "ansible-playbook": "main.yml",
+    "extra-vars": [
+      
+    ],
+    "groups": [
+      {
+        "name": "web",
+        "hostnames": [
+          "mysite"
+        ]
+      }
+    ]
   },
   "user-variables": {
     "domain": {
@@ -49,17 +49,11 @@
       "default": "mysite.envs.subutai.cloud",
       "validation": "[a-zA-Z0-9.-]+"
     },
-     "envName": {
+    "envName": {
       "description": "Enter your environment name",
       "type": "string",
       "default": "wordpress env",
       "validation": "[a-zA-Z0-9]+"
-    },
-   "containerCount": {
-      "description": "test",
-      "type": "int",
-      "default": "50",
-      "validation": "\\d+"
     }
   }
 }
