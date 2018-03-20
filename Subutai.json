@@ -6,7 +6,7 @@
       "template": "apache",
       "peer-criteria": "HTTP-optdyn",
       "size": "SMALL",
-      "count" : "2",
+      "count" : "${apacheCount}",
       "port-mapping": [
         {
           "protocol": "http",
@@ -54,6 +54,12 @@
       "type": "string",
       "default": "wordpress env",
       "validation": "[a-zA-Z0-9]+"
-    }
+    },
+   "apacheCount":{
+       "description": "Enter apache container count",
+      "type": "int",
+      "default": "wordpress env",
+      "validation": "[0-9]+"
+   }
   }
 }
